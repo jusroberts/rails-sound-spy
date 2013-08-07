@@ -1,0 +1,4 @@
+<marquee behavior="slide"><h2>Welcome to</h2></marquee>
+<br>
+<marquee behavior="alternate" direction="right"><h1 style="font-size: 10em;">Raspberry Spi!</h1></marquee>
+<br><br>
