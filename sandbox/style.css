@@ -1,0 +1,28 @@
+body{
+	position:relative;
+	font-family:arial, sans-serif;
+	/*background: #FCFFF5;*/
+}
+
+#container{
+	position:absolute;
+	width:320px;
+	top:50%;	
+	margin-top:-80px;
+	left:50%;
+	margin-left:-160px;
+	color:#193441;
+}
+
+p{
+	padding:20px;
+	float:left;
+	font-weight: bold;
+}
+
+p.active{
+	border-radius:10px;
+	background:#193441;
+	color:white;
+	font-weight: normal;
+}
