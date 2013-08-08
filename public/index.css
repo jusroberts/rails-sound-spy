@@ -1,0 +1,22 @@
+body{
+    background-color:#f2f2f2;
+    color:#2e3640;
+}
+#top{
+    width: 100%;
+}
+span{
+    width: 33%;
+    text-align: center;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h1{
+    font-size: 10em;
+}
+a{
+    color:#c6655e;
+    text-decoration:none;
+}
