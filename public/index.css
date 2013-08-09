@@ -20,3 +20,10 @@ a{
     color:#c6655e;
     text-decoration:none;
 }
+#page{
+    width:100%;
+}
+#footer{
+    width: 100%;
+    text-align: center;
+}
