@@ -24,6 +24,16 @@ peak_index = Array.new(rawSound.size / LARGE_SAMPLE_SIZE, false)
 
 index = 0
 
+
+#****************
+#PART 1:
+#Determine where small peaks (10-20ms in length) occur in larger sample sets (100ms).
+#
+#Currently outputs a boolean array where peaks are found.
+#
+#Change SENSITIVITY to adjust number of peaks reported.
+#****************
+
 for sample in 0..ste_large_sample.size
 
   ste_large_sample[sample] = 0
