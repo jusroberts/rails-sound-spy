@@ -29,6 +29,7 @@ for sample in 0..ste_large_sample.size
   ste_large_sample[sample] = 0
 
   #fill out the small samples in the large sample
+  # :: for use as peaks
   for i in 0..10
     ste_small_sample[i] = 0
     for j in 0..SMALL_SAMPLE_SIZE
@@ -37,6 +38,7 @@ for sample in 0..ste_large_sample.size
     ste_small_sample[i] /= SMALL_SAMPLE_SIZE
   end
 
+  #Get average of 100ms window to compare peaks with
   for i in 0..10
     ste_large_sample[sample] += (1/10) * ste_small_sample[i]
   end
