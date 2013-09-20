@@ -63,5 +63,9 @@ for sample in 0..ste_large_sample.size
   index += LARGE_SAMPLE_SIZE
 end
 
-
+#****************
+#PART 2: MFCC
+#
+#
+#****************
 puts peak_index
