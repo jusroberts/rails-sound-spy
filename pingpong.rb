@@ -40,8 +40,7 @@ end
 #    end
 #  end
 #end
-
-Capture.open do |capture|
+ALSA::PCM::Capture.open do |capture|
   capture.read do |buffer, frame_count|
     $stdout.write buffer
   end
