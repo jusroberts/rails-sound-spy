@@ -2,11 +2,10 @@
 
 require 'rubygems'
 require 'wav-file'
-require 'alsa'
 
 #return true if less than time interval
 def recent_detection (last_detection, current_detection)
-  interval = 8000
+  interval = 3000
   if last_detection.nil?
     return false
   end
@@ -14,35 +13,51 @@ def recent_detection (last_detection, current_detection)
 end
 
 def get_value(rawSound, index)
-  return (rawSound.data[index].unpack('H*')[0].to_i(16) + (rawSound.data[index + 1].unpack('H*')[0].to_i(16) << 16)).to_f
+  return (rawSound[index].unpack('H*')[0].to_i(8) + (rawSound[index + 1].unpack('H*')[0].to_i(8) << 8)).to_f
 end
 
+def record_audio
+  return system('arecord -d 3 -f S16_LE -D plug:default out.wav')
+end
 
+def load_audio
+  f =  open("out.wav")
+  format = WavFile::readFormat(f)
+  puts format
+  puts
+  data = WavFile::readDataChunk(f).data
+  f.close
 
+  return data
+end
 
-#f = open("pong_test.wav")
-#format = WavFile::readFormat(f)
-#rawSound = WavFile::readDataChunk(f)
-#f.close
-#
-#puts format
-#
-#puts
-#
-#last_detection = nil
-#for index in 0..((rawSound.data.length - 1) / 2)
-#  if ((rawSound.data[index * 2 + 1].unpack('H*')[0].to_i(16) >> 4) > 0)
-#    unless recent_detection(last_detection, index * 2)
-#      minutes = (index / (60 * 44100)).to_i
-#      seconds = ((index.to_f / 44100.0) - (minutes * 60))
-#      puts "#{minutes}:#{seconds.round(3)}"
-#      last_detection = index * 2
-#    end
-#  end
-#end
-ALSA::PCM::Capture.open do |capture|
-  capture.read do |buffer, frame_count|
-    $stdout.write buffer
+def delete_old_file
+  return system("rm out.wav")
+end
+
+def detect_pings(rawSound)
+  last_detection = nil
+  for index in 0..((rawSound.length - 1) / 2)
+    if ((rawSound[index * 2 + 1].unpack('H*')[0].to_i(8) >> 4) > 0)
+      unless recent_detection(last_detection, index * 2)
+        minutes = (index / (60 * 8000)).to_i
+        seconds = ((index.to_f / 8000.0) - (minutes * 60))
+        puts "#{minutes}:#{seconds.round(3)} :::: #{get_value(rawSound,index * 2)} :: #{Time.now}"
+        last_detection = index * 2
+      end
+    end
   end
 end
+
+def main_loop
+  puts record_audio
+  rawSound = load_audio
+  delete_old_file
+  detect_pings(rawSound)
+end
+
+while true
+  main_loop
+end
+
 
