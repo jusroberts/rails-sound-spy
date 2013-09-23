@@ -88,7 +88,7 @@ running_total = 0
 threshold = 1000000
 last_detection = nil
 for index in 0..((rawSound.data.length - 1) / 2)
-  if (get_value(rawSound,index * 2) > threshold)
+  if ((rawSound.data[index * 2 + 1].unpack('H*')[0].to_i(16) >> 4) > 0)
     unless recent_detection(last_detection, index * 2)
       minutes = (index / (60 * 44100)).to_i
       seconds = ((index.to_f / 44100.0) - (minutes * 60))
