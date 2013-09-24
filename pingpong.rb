@@ -37,7 +37,7 @@ end
 def write_to_db
   begin
 
-    db = SQLite3::Database.open "db/development.sqlite3"
+    db = SQLite3::Database.open "db/production.sqlite3"
     db.execute "INSERT INTO pings(time) VALUES (datetime('now'))"
 
   rescue SQLite3::Exception => e
