@@ -1,13 +1,10 @@
 <%
 
    @ping = Ping.last()
-
+   @available = (Time.now - @ping[:time] > 120 ? true : false)
 %>
-<div>
-<%= @ping %>
-</div>
 	<div id="container">
 		<h1>Ping Pong Table Is:</h1>
-		<p class="">AVAILABLE</p>
-		<p class="active">IN-USE</p>
+		<p class="<%= 'active' if @available %>">AVAILABLE</p>
+		<p class="<%= 'active' unless @available %>">IN-USE</p>
 	</div>
