@@ -2,6 +2,9 @@ RailsSoundSpy::Application.routes.draw do
   get "status/index"
   get "status/", :to=>"status#index"
   get 'status/available', to: 'status#available'
+
+  get "data/index"
+  get "data/", :to=>"data#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
