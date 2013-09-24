@@ -37,7 +37,7 @@ def detect_pings(rawSound)
   for index in 0..((rawSound.length - 1) / 2)
     if ((rawSound[index * 2 + 1].unpack('H*')[0].to_i(8) >> 4) > 0)
         puts "#{Time.now} Ping Detected :: Amplitude: #{get_value(rawSound,index * 2)}"
-        system("echo #{Time.now} :: Amplitude: #{get_value(rawSound,index * 2)} >> ~/log/pingpong")
+        system("echo #{Time.now} :: Amplitude: #{get_value(rawSound,index * 2)} >> ~/log/pings")
         #Add DB call here
         return
     end
@@ -53,7 +53,7 @@ end
 
 #Create Log file if none
 system('mkdir ~/log')
-system('touch ~/log/pingpong')
+system('touch ~/log/pings')
 
 # RUN
 while true
