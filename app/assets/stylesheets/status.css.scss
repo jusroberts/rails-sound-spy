@@ -1,26 +1,30 @@
-body{
-	font-family:arial, sans-serif;
+body {
+	font-family: arial, sans-serif;
 }
 
-#container{
-	position:absolute;
-	width:320px;
-	top:50%;	
-	margin-top:-80px;
-	left:50%;
-	margin-left:-160px;
-	color:#193441;
+#container {
+	width: 50%;
+	color: #193441;
+	font-size: 0;
+	margin: 10% auto;
+
+	> h1 {
+		font-size: 32px;
+	}
+
+	> p {
+		text-align: center;
+		width: 23.33%; 
+		display: inline-block;
+		font-size: 16px;
+		font-weight: bold;
+		padding: 20px 5%;
+	}
 }
 
-p{
-	padding:20px;
-	float:left;
-	font-weight: bold;
-}
 
-p.active{
-	border-radius:10px;
-	background:#193441;
-	color:white;
-	font-weight: normal;
+.active {
+	border-radius: 10px;
+	background: #193441;
+	color: white;
 }

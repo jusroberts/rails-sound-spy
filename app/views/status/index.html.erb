@@ -1,10 +1,20 @@
-<%
+<div id="container">
+	<h1>The Ping Pong Table Is...</h1>
+	<p class="true <%= ' active' if (!!@available == @available && @available) %>">AVAILABLE</p>
+	<p class="false <%= ' active' if (!!@available == @available && !@available) %>">IN-USE</p>
+	<p class="unknown <%= ' active' unless !!@available == @available %>">UNKNOWN</p>
+</div>
 
-   @ping = Ping.last()
-   @available = (Time.now - @ping[:time] > 10 ? true : false)
-%>
-	<div id="container">
-		<h1>Ping Pong Table Is:</h1>
-		<p class="<%= 'active' if @available %>">AVAILABLE</p>
-		<p class="<%= 'active' unless @available %>">IN-USE</p>
-	</div>
+
+<script type="text/javascript">
+	setTimeout('poll()', 5000);
+
+	function poll() {
+		$.getJSON('/status/available.json', function(data) {
+			$('p').removeClass('active');
+			$('.' + data.available).addClass('active');
+
+			setTimeout('poll()', 5000);
+		});
+	}
+</script>
