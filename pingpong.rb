@@ -23,8 +23,6 @@ end
 def load_audio
   f =  open("out.wav")
   format = WavFile::readFormat(f)
-  puts format
-  puts
   data = WavFile::readDataChunk(f).data
   f.close
 
@@ -50,7 +48,7 @@ def detect_pings(rawSound)
 end
 
 def main_loop
-  puts record_audio
+  record_audio
   rawSound = load_audio
   delete_old_file
   detect_pings(rawSound)
