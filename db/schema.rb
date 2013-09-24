@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20130924153818) do
 
   create_table "pings", force: true do |t|
-    t.time     "datetime"
+    t.datetime "time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
