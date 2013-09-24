@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5692c0ef-8b90-46bc-a5c2-17f7b6193592" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/status/index.html.erb" afterPath="$PROJECT_DIR$/app/views/status/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/ping.rb" afterPath="$PROJECT_DIR$/app/models/ping.rb" />
     </list>
     <ignored path="rails-sound-spy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -12,7 +11,7 @@
     <file path="$USER_HOME$/cbdr/miracle-workers/app/assets/stylesheets/cb_intl/global/nav_override.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1377143947380" ignored="false" />
     <file path="$USER_HOME$/cbdr/sologig/app/assets/stylesheets/cb_intl/global/nav_override.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1377144024355" ignored="false" />
     <file path="/20130924153818_create_pings.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380038141443" ignored="false" />
-    <file path="/index.html.erb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380042543264" ignored="false" />
+    <file path="/index.html.erb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380042615211" ignored="false" />
     <file path="/ping.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380042391659" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +53,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/status/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="9" selection-start="41" selection-end="41" vertical-scroll-proportion="0.12413793">
+            <state line="7" column="6" selection-start="56" selection-end="56" vertical-scroll-proportion="0.14482759">
               <folding />
             </state>
           </provider>
@@ -597,7 +596,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/status/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="9" selection-start="41" selection-end="41" vertical-scroll-proportion="0.12413793">
+        <state line="7" column="6" selection-start="56" selection-end="56" vertical-scroll-proportion="0.14482759">
           <folding />
         </state>
       </provider>
