@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5692c0ef-8b90-46bc-a5c2-17f7b6193592" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/data/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/data_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/data_controller.rb" />
     </list>
     <ignored path="rails-sound-spy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,7 +14,7 @@
     <file path="/index.html.erb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380057069936" ignored="false" />
     <file path="/ping.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380042391659" ignored="false" />
     <file path="/Gemfile" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380055632769" ignored="false" />
-    <file path="/data_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380058232238" ignored="false" />
+    <file path="/data_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380058355521" ignored="false" />
     <file path="/routes.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380056384243" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +121,7 @@
       <file leaf-file-name="data_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="62" selection-start="191" selection-end="191" vertical-scroll-proportion="0.16528925">
+            <state line="20" column="34" selection-start="493" selection-end="493" vertical-scroll-proportion="0.41322315">
               <folding />
             </state>
           </provider>
@@ -778,7 +773,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="62" selection-start="191" selection-end="191" vertical-scroll-proportion="0.16528925">
+        <state line="20" column="34" selection-start="493" selection-end="493" vertical-scroll-proportion="0.41322315">
           <folding />
         </state>
       </provider>

@@ -18,6 +18,7 @@ class DataController < ApplicationController
       @chartData[(rawTime / (60 * 5)).to_int] += 1
     end
 
+    #TODO: add average data points
     @yesterdayChart = LazyHighCharts::HighChart.new('graph') do |f|
       f.title({ :text=>"Yesterday's Data"})
       f.legend({:align => 'right',
