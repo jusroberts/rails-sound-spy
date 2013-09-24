@@ -2,6 +2,7 @@
 
 require 'rubygems'
 require 'wav-file'
+require 'sqlite3'
 
 #return true if less than time interval
 #def recent_detection (last_detection, current_detection)
@@ -33,16 +34,34 @@ def delete_old_file
   return system('rm out.wav')
 end
 
+def write_to_db
+  begin
+
+    db = SQLite3::Database.open "db/development.sqlite"
+    db.execute "INSERT INTO pings(time) VALUES (datetime('now'))"
+
+  rescue SQLite3::Exception => e
+
+    puts "Exception occured"
+    puts e
+
+  ensure
+    db.close if db
+  end
+end
+
 def detect_pings(rawSound)
   for index in 0..((rawSound.length - 1) / 2)
     if ((rawSound[index * 2 + 1].unpack('H*')[0].to_i(8) >> 4) > 0)
         puts "#{Time.now} Ping Detected :: Amplitude: #{get_value(rawSound,index * 2)}"
         system("echo #{Time.now} :: Amplitude: #{get_value(rawSound,index * 2)} >> ~/log/pings")
         #Add DB call here
+        write_to_db
         return
     end
   end
 end
+
 
 def main_loop
   record_audio
