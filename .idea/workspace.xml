@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5692c0ef-8b90-46bc-a5c2-17f7b6193592" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/data_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/data_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/data/index.html.erb" afterPath="$PROJECT_DIR$/app/views/data/index.html.erb" />
-    </list>
+    <list default="true" id="5692c0ef-8b90-46bc-a5c2-17f7b6193592" name="Default" comment="" />
     <ignored path="rails-sound-spy.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380024151351" ignored="false" />
@@ -122,7 +119,7 @@
       <file leaf-file-name="data_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="9" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.37190083">
+            <state line="40" column="9" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.8264463">
               <folding />
             </state>
           </provider>
@@ -774,7 +771,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="9" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.37190083">
+        <state line="40" column="9" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.8264463">
           <folding />
         </state>
       </provider>
