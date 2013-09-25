@@ -2,6 +2,7 @@ RailsSoundSpy::Application.routes.draw do
   get "status/index"
   get "status/", :to=>"status#index"
   get 'status/available', to: 'status#available'
+  get '/', :to =>"status#index"
 
   get "data/index"
   get "data/", :to=>"data#index"
