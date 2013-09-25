@@ -5,6 +5,10 @@
 	<p class="unknown <%= ' active' unless !!@available == @available %>">UNKNOWN</p>
 </div>
 
+<h1>Historical Data<span class="tiny">BETA</span></h1>
+
+<%= high_chart("my_id4", @hitsChart)  %>
+
 
 <script type="text/javascript">
 	setTimeout('poll()', 5000);
