@@ -3,7 +3,7 @@ body {
 }
 
 #container {
-	width: 50%;
+    width: 50%;
 	color: #193441;
 	font-size: 0;
 	margin: 10% auto;
@@ -24,13 +24,18 @@ body {
 
 
 .active {
-	border-radius: 10px;
-	background: #193441;
-	color: white;
+  border-radius: 10px;
+  background: #193441;
+  color: white;
 }
 
+#chart_title {
+  padding-left: 65px;
+  width: 226px;
+}
 
 .tiny {
   font-size: 12px;
-  margin-bottom: 20px;
+  margin-top: -5px;
+  text-align: right;
 }
