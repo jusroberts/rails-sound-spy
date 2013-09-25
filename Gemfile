@@ -36,11 +36,15 @@ group :doc do
 end
 
 
-group :development do
+#group :development do
   # Used for showing better errors on the Rails Error Screen
   gem 'better_errors'
   gem 'binding_of_caller'
-end
+#end
+
+gem 'better_errors'
+gem 'binding_of_caller'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
