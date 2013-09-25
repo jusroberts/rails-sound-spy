@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5692c0ef-8b90-46bc-a5c2-17f7b6193592" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/status/index.html.erb" afterPath="$PROJECT_DIR$/app/views/status/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" />
     </list>
     <ignored path="rails-sound-spy.iws" />
@@ -19,7 +18,7 @@
     <file path="/routes.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380134412260" ignored="false" />
     <file path="/application.css" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380129776171" ignored="false" />
     <file path="/status_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380130985611" ignored="false" />
-    <file path="/status.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380139318445" ignored="false" />
+    <file path="/status.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380141524010" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +59,7 @@
       <file leaf-file-name="status.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/status.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="11" selection-start="252" selection-end="252" vertical-scroll-proportion="0.40053403">
+            <state line="36" column="6" selection-start="467" selection-end="467" vertical-scroll-proportion="0.6595461">
               <folding />
             </state>
           </provider>
@@ -729,13 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/data.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -787,6 +779,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/status/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="24" selection-start="438" selection-end="438" vertical-scroll-proportion="-5.625">
@@ -796,7 +795,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/status.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="11" selection-start="252" selection-end="252" vertical-scroll-proportion="0.40053403">
+        <state line="36" column="6" selection-start="467" selection-end="467" vertical-scroll-proportion="0.6595461">
           <folding />
         </state>
       </provider>

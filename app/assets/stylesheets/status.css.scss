@@ -31,6 +31,12 @@ body {
   background: #193441;
   color: white;
 }
+.true.active{
+  background-color: #437443;
+}
+.false.active{
+  background-color: #c74444;
+}
 
 #chart_title {
   padding-left: 65px;
