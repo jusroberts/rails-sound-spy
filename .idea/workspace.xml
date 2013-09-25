@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5692c0ef-8b90-46bc-a5c2-17f7b6193592" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/status/index.html.erb" afterPath="$PROJECT_DIR$/app/views/status/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" />
     </list>
     <ignored path="rails-sound-spy.iws" />
@@ -11,14 +12,14 @@
     <file path="$USER_HOME$/cbdr/miracle-workers/app/assets/stylesheets/cb_intl/global/nav_override.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1377143947380" ignored="false" />
     <file path="$USER_HOME$/cbdr/sologig/app/assets/stylesheets/cb_intl/global/nav_override.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1377144024355" ignored="false" />
     <file path="/20130924153818_create_pings.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380038141443" ignored="false" />
-    <file path="/index.html.erb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380135955180" ignored="false" />
+    <file path="/index.html.erb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380138839216" ignored="false" />
     <file path="/ping.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380042391659" ignored="false" />
     <file path="/Gemfile" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380055632769" ignored="false" />
     <file path="/data_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380130185351" ignored="false" />
     <file path="/routes.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380134412260" ignored="false" />
     <file path="/application.css" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380129776171" ignored="false" />
     <file path="/status_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380130985611" ignored="false" />
-    <file path="/status.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380136075392" ignored="false" />
+    <file path="/status.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380139318445" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
       <file leaf-file-name="status.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/status.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="13" selection-start="114" selection-end="114" vertical-scroll-proportion="0.16021362">
+            <state line="20" column="11" selection-start="252" selection-end="252" vertical-scroll-proportion="0.40053403">
               <folding />
             </state>
           </provider>
@@ -68,7 +69,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/status/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="4" selection-start="339" selection-end="339" vertical-scroll-proportion="-4.375">
+            <state line="9" column="24" selection-start="438" selection-end="438" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
@@ -788,14 +789,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/status/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="339" selection-end="339" vertical-scroll-proportion="-4.375">
+        <state line="9" column="24" selection-start="438" selection-end="438" vertical-scroll-proportion="-5.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/status.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="114" selection-end="114" vertical-scroll-proportion="0.16021362">
+        <state line="20" column="11" selection-start="252" selection-end="252" vertical-scroll-proportion="0.40053403">
           <folding />
         </state>
       </provider>

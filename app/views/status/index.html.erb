@@ -1,14 +1,16 @@
-<div id="container">
-	<h1>The Ping Pong Table Is...</h1>
-	<p class="true <%= ' active' if (!!@available == @available && @available) %>">AVAILABLE</p>
-	<p class="false <%= ' active' if (!!@available == @available && !@available) %>">IN-USE</p>
-	<p class="unknown <%= ' active' unless !!@available == @available %>">UNKNOWN</p>
+<div class="even">
+    <div id="container">
+        <h1>The Ping Pong Table Is...</h1>
+        <p class="true <%= ' active' if (!!@available == @available && @available) %>">AVAILABLE</p>
+        <p class="false <%= ' active' if (!!@available == @available && !@available) %>">IN-USE</p>
+        <p class="unknown <%= ' active' unless !!@available == @available %>">UNKNOWN</p>
+    </div>
 </div>
+<div class="odd">
+    <h1 id="chart_title">Historical Data<div class="tiny">BETA</div></h1>
 
-<h1 id="chart_title">Historical Data<div class="tiny">BETA</div></h1>
-
-<%= high_chart("my_id4", @hitsChart)  %>
-
+    <%= high_chart("my_id4", @hitsChart)  %>
+</div>
 
 <script type="text/javascript">
 	setTimeout('poll()', 5000);
