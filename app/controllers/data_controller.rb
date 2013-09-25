@@ -2,25 +2,48 @@ class DataController < ApplicationController
 
   def index
 
-    @chartData = Array.new((24 * 60 / 5), 0)
+    @yesterdayChartData = Array.new((24 * 60 / 5), 0)
+    @todayChartData = Array.new((24 * 60 / 5), 0)
+    @averageChartData = Array.new((24 * 60 / 5), 0)
 
     pings = Ping.all()
 
     #This is set to today and tomorrow until we get more data.
-    yesterday = Date.today.to_time
-    today = Date.tomorrow.to_time
+    yesterday = Date.yesterday.to_time
+    today = Date.today.to_time
+    tomorrow = Date.tomorrow.to_time
+
+    day = nil
+    numDays = 0
 
     pings.each do |p|
-      unless p[:time] > yesterday and p[:time] < today
-        next
-      end
       rawTime = p[:time] - yesterday
-      @chartData[(rawTime / (60 * 5)).to_int] += 1
+      if p[:time] > yesterday and p[:time] < today
+        #Do yesterday's buckets
+        @yesterdayChartData[(rawTime / (60 * 5)).to_int] += 1
+      elsif p[:time] > today && p[:time] < tomorrow
+        #Do Today's buckets
+        @todayChartData[(rawTime / (60 * 5)).to_int] += 1
+      end
+
+      @averageChartData[(rawTime / (60 * 5)).to_int] += 1
+
+      if day.nil? or p[:time].to_date > day
+        day = p[:time].to_date
+        numDays += 1
+      end
+
+    end
+
+    unless numDays = 0
+      @averageChartData.each do |d|
+        d = d / numDays
+      end
     end
 
     #TODO: add average data points
-    @yesterdayChart = LazyHighCharts::HighChart.new('graph') do |f|
-      f.title({ :text=>"Yesterday's Data"})
+    @hitsChart = LazyHighCharts::HighChart.new('graph') do |f|
+      f.title({ :text=>"Ping Pong Data"})
       f.legend({:align => 'right',
               :x => -100,
               :verticalAlign=>'top',
@@ -33,7 +56,9 @@ class DataController < ApplicationController
              })
       f.options[:yAxis][:title] = {:text=>"Detections"}
       f.options[:xAxis][:title] = {:text=>"Time"}
-      f.series(:type=> 'spline',:name=> 'Ping Pong Hits', :data=> @chartData)
+      f.series(:type=> 'spline',:name=> 'Yesterday', :data=> @yesterdayChartData)
+      f.series(:type=> 'spline',:name=> 'Today', :data=> @todayChartData)
+      f.series(:type=> 'spline',:name=> 'Average', :data=> @averageChartData)
 
     end
   end
