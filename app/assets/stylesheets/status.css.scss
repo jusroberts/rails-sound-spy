@@ -9,10 +9,10 @@ body {
   font-size: 0;
   margin: 0 auto;
 
-  padding: 4% 0;
+  padding: 1.5% 0 3.5%;
 
-  > h1 {
-    font-size: 32px;
+  > h2 {
+    font-size: 28px;
   }
 
   > p {
@@ -38,9 +38,11 @@ body {
   background-color: #c74444;
 }
 
-#chart_title {
+.section_title {
   padding-left: 65px;
   width: 226px;
+  margin: 0;
+  padding-top: .5em;
 }
 
 .tiny {
