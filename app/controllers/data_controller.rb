@@ -14,30 +14,31 @@ class DataController < ApplicationController
     tomorrow = Date.tomorrow.to_time
 
     @day = nil
+    @finalDay = nil
     @numDays = 0
 
     pings.each do |p|
       rawTime = p[:time] - p[:time].to_date.to_time
       if p[:time] > yesterday and p[:time] < today
         #Do yesterday's buckets
-#	rawTime = p[:time] - yesterday
         @yesterdayChartData[(rawTime / (60 * 5)).to_int] += 1
       elsif p[:time] > today and p[:time] < tomorrow
         #Do Today's buckets
-#	rawTime = p[:time] - yesterday
         @todayChartData[(rawTime / (60 * 5)).to_int] += 1
       end
 
       @averageChartData[(rawTime / (60 * 5)).to_int] += 1
 
-      if day.nil? or p[:time].to_date.to_time > @day.to_time
+      if @day.nil? or p[:time].to_date > @day
         @day = p[:time].to_date
         @numDays += 1
+        puts "Incrementing Days #{@numDays}"
       end
 
+      @finalDay = p[:time].to_date
     end
 
-    unless @numDays = 0
+    unless @numDays == 0
       @averageChartData.each do |d|
         d = d / @numDays
       end
