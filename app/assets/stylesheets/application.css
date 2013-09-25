@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+.tiny {
+    font-size: 12px;
+    margin-bottom: 20px;
+}

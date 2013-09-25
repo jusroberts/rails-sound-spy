@@ -39,9 +39,9 @@ class DataController < ApplicationController
     end
 
     unless @numDays == 0
-      @averageChartData.each do |d|
-        d = d / @numDays
-      end
+      @averageChartData.map!{
+          |n| n / @numDays
+                            }
     end
 
     #TODO: add average data points
