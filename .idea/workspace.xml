@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5692c0ef-8b90-46bc-a5c2-17f7b6193592" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/status/index.html.erb" afterPath="$PROJECT_DIR$/app/views/status/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/status_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/status_controller.rb" />
     </list>
     <ignored path="rails-sound-spy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,7 +17,7 @@
     <file path="/data_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380130185351" ignored="false" />
     <file path="/routes.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380134412260" ignored="false" />
     <file path="/application.css" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380129776171" ignored="false" />
-    <file path="/status_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380130985611" ignored="false" />
+    <file path="/status_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380203035259" ignored="false" />
     <file path="/status.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380143941943" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="status.css.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="status.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/status.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="22" selection-start="159" selection-end="159" vertical-scroll-proportion="0.098798394">
+            <state line="11" column="22" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -75,10 +74,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="status_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="status_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/status_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+            <state line="33" column="26" selection-start="702" selection-end="702" vertical-scroll-proportion="0.27903873">
               <folding />
             </state>
           </provider>
@@ -119,10 +118,10 @@
         <option value="$PROJECT_DIR$/app/views/data/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/data_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/controllers/status_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/status/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" />
+        <option value="$PROJECT_DIR$/app/controllers/status_controller.rb" />
       </list>
     </option>
   </component>
@@ -791,9 +790,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/status_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/status/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="266" selection-end="266" vertical-scroll-proportion="0.0">
+        <state line="1" column="11" selection-start="30" selection-end="30" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/status.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="22" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -805,16 +811,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/status/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/status_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="11" selection-start="30" selection-end="30" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/status.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="159" selection-end="159" vertical-scroll-proportion="0.098798394">
+        <state line="33" column="26" selection-start="702" selection-end="702" vertical-scroll-proportion="0.27903873">
           <folding />
         </state>
       </provider>

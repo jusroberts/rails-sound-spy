@@ -16,32 +16,37 @@ class StatusController < ApplicationController
 
   def chart
 
-    @yesterdayChartData = Array.new((24 * 60 / 5), 0)
-    @todayChartData = Array.new((24 * 60 / 5), 0)
-    @averageChartData = Array.new((24 * 60 / 5), 0)
+    @yesterdayChartData = Array.new((10 * 60 / 5), 0)
+    @todayChartData = Array.new((10 * 60 / 5), 0)
+    @averageChartData = Array.new((10 * 60 / 5), 0)
 
     pings = Ping.all()
 
     #This is set to today and tomorrow until we get more data.
     yesterday = Date.yesterday.to_time
     today = Date.today.to_time
-    tomorrow = Date.tomorrow.to_time
 
     @day = nil
     @finalDay = nil
     @numDays = 0
 
+    startTime = 9 * 60 * 60
+    endTime = 18 * 60 * 60
+
     pings.each do |p|
       rawTime = p[:time] - p[:time].to_date.to_time
-      if p[:time] > yesterday and p[:time] < today
+      if p[:time] > (yesterday.to_time + startTime) and p[:time] < (yesterday.to_time + endTime)
         #Do yesterday's buckets
-        @yesterdayChartData[(rawTime / (60 * 5)).to_int] += 1
-      elsif p[:time] > today and p[:time] < tomorrow
+        @yesterdayChartData[(rawTime / (60 * 5)).to_int - (startTime / (60 * 5))] += 1
+      elsif p[:time] > (today.to_time + startTime) and p[:time] < (today.to_time + endTime)
         #Do Today's buckets
-        @todayChartData[(rawTime / (60 * 5)).to_int] += 1
+        @todayChartData[(rawTime / (60 * 5)).to_int - (startTime / (60 * 5))] += 1
       end
 
-      @averageChartData[(rawTime / (60 * 5)).to_int] += 1
+      if (p[:time] > p[:time].to_date.to_time + startTime) and (p[:time] < p[:time].to_date.to_time + endTime)
+        @averageChartData[(rawTime / (60 * 5)).to_int - (startTime / (60 * 5))] += 1
+      end
+
 
       if @day.nil? or p[:time].to_date > @day
         @day = p[:time].to_date
