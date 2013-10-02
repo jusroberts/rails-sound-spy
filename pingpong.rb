@@ -22,16 +22,18 @@ def record_audio
 end
 
 def load_audio
-  f =  open('out.wav')
-  format = WavFile::readFormat(f)
-  data = WavFile::readDataChunk(f).data
-  f.close
+  if File.exists?('out.wav')
+    f =  open('out.wav')
+    format = WavFile::readFormat(f)
+    data = WavFile::readDataChunk(f).data
+    f.close
 
-  return data
+    return data
+  end
 end
 
 def delete_old_file
-  return system('rm out.wav')
+  return system('rm out.wav') if File.exists?('out.wav')
 end
 
 def write_to_db
