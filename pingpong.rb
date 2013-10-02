@@ -73,7 +73,7 @@ def main_loop
 end
 
 #Create Log file if none
-system('mkdir /rss')
+system('touch /rss/log')
 
 # RUN
 while true
