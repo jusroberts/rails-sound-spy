@@ -69,7 +69,7 @@ def main_loop
   record_audio
   rawSound = load_audio
   delete_old_file
-  detect_pings(rawSound)
+  detect_pings(rawSound) unless rawSound.nil?
 end
 
 #Create Log file if none
