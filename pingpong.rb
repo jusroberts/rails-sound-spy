@@ -18,7 +18,9 @@ def get_value(rawSound, index)
 end
 
 def record_audio
-  return system('arecord -d 3 -f S16_LE -D plug:default /rss/out.wav')
+  system('arecord -d 3 -f S16_LE -D plug:default /rss/out.wav')
+  p 'Recorded.'
+  p File.exists?('/rss/out.wav')
 end
 
 def load_audio
