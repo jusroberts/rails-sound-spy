@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/home/pi/.rvm/rubies/ruby-1.9.3-p194 ruby
 
 require 'rubygems'
 require 'wav-file'
