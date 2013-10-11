@@ -38,7 +38,7 @@ end
 
 def write_to_db
 
-  db_name = "db/production.sqlite3"
+  db_name = "/www/rails-sound-spy/db/production.sqlite3"
 
   #Record Ping
   begin
