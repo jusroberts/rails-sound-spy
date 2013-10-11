@@ -68,10 +68,11 @@ def write_to_db
 
     db = SQLite3::Database.open db_name
 
+    system("echo #{index} >> /rss/log")
+
     number_of_hits = db.execute "SELECT number_of_hits FROM histories WHERE time='#{index}'"
 
-
-    system("echo #{number_of_hits} >> /rss/log")
+    system("echo number of hits: #{number_of_hits} >> /rss/log")
 
     if number_of_hits.nil?
       db.execute "INSERT INTO histories (number_of_hits, time) VALUES (1,#{index})"
