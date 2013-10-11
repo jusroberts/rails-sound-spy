@@ -21,7 +21,7 @@ class StatusController < ApplicationController
     @averageChartData = Array.new((9 * 60 / 5), 0)
 
     histories = History.all
-    days = Day.all
+    days = Days.all
 
     #This is set to today and tomorrow until we get more data.
     yesterday = Date.yesterday.to_time

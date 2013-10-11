@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5692c0ef-8b90-46bc-a5c2-17f7b6193592" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pingpong.rb" afterPath="$PROJECT_DIR$/pingpong.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/status_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/status_controller.rb" />
     </list>
     <ignored path="rails-sound-spy.iws" />
@@ -18,7 +17,7 @@
     <file path="/data_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380310254972" ignored="false" />
     <file path="/routes.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380134412260" ignored="false" />
     <file path="/application.css" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380129776171" ignored="false" />
-    <file path="/status_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381520666127" ignored="false" />
+    <file path="/status_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381521392615" ignored="false" />
     <file path="/status.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380143941943" ignored="false" />
     <file path="/application.html.erb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380203639192" ignored="false" />
     <file path="/history.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381520502632" ignored="false" />
@@ -74,7 +73,7 @@
       <file leaf-file-name="status_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/status_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="26" selection-start="918" selection-end="918" vertical-scroll-proportion="0.8347107">
+            <state line="24" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="0.26859504">
               <folding />
             </state>
           </provider>
@@ -771,13 +770,6 @@
         <state line="8" column="9" selection-start="130" selection-end="130" vertical-scroll-proportion="0.16528925" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/status/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="11" selection-start="30" selection-end="30" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/history.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="43" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
@@ -785,23 +777,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/days.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pingpong.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="85" column="7" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -820,9 +798,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/days.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="21" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/status/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="11" selection-start="30" selection-end="30" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/status_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="26" selection-start="918" selection-end="918" vertical-scroll-proportion="0.8347107">
+        <state line="24" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="0.26859504">
           <folding />
         </state>
       </provider>
