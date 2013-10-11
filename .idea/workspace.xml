@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5692c0ef-8b90-46bc-a5c2-17f7b6193592" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/status_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/status_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pingpong.rb" afterPath="$PROJECT_DIR$/pingpong.rb" />
     </list>
     <ignored path="rails-sound-spy.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381518316082" ignored="false" />
-    <file path="/pingpong.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381520141183" ignored="false" />
+    <file path="/pingpong.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381522033093" ignored="false" />
     <file path="$USER_HOME$/cbdr/miracle-workers/app/assets/stylesheets/cb_intl/global/nav_override.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1377143947380" ignored="false" />
     <file path="$USER_HOME$/cbdr/sologig/app/assets/stylesheets/cb_intl/global/nav_override.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1377144024355" ignored="false" />
     <file path="/20130924153818_create_pings.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380038141443" ignored="false" />
@@ -52,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pingpong.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pingpong.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pingpong.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="7" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
+            <state line="101" column="21" selection-start="2333" selection-end="2333" vertical-scroll-proportion="1.9214876">
               <folding />
             </state>
           </provider>
@@ -70,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="status_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="status_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/status_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="0.26859504">
+            <state line="24" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -137,9 +137,9 @@
         <option value="$PROJECT_DIR$/app/controllers/data_controller.rb" />
         <option value="$PROJECT_DIR$/setup_db.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130927191840_create_histories.rb" />
-        <option value="$PROJECT_DIR$/pingpong.rb" />
         <option value="$PROJECT_DIR$/app/models/history.rb" />
         <option value="$PROJECT_DIR$/app/controllers/status_controller.rb" />
+        <option value="$PROJECT_DIR$/pingpong.rb" />
       </list>
     </option>
   </component>
@@ -777,13 +777,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pingpong.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="7" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/data_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="12" selection-start="354" selection-end="372" vertical-scroll-proportion="0.11157025">
@@ -821,7 +814,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/status_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="0.26859504">
+        <state line="24" column="0" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pingpong.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="21" selection-start="2333" selection-end="2333" vertical-scroll-proportion="1.9214876">
           <folding />
         </state>
       </provider>

@@ -44,11 +44,11 @@ def write_to_db
   begin
 
     db = SQLite3::Database.open db_name
-    db.execute "TRUNCATE TABLE pings"
     db.execute "INSERT INTO pings(time) VALUES (datetime('now'))"
 
   rescue SQLite3::Exception => e
 
+    system("echo Pings error >> /rss/log")
     puts "Exception occured"
     puts e
 
@@ -76,6 +76,7 @@ def write_to_db
 
   rescue SQLite3::Exception => e
 
+    system("echo History error >> /rss/log")
     puts "Exception occured"
     puts e
 
@@ -98,6 +99,7 @@ def write_to_db
 
   rescue SQLite3::Exception => e
 
+    system("echo Days error >> /rss/log")
     puts "Exception occured"
     puts e
 
