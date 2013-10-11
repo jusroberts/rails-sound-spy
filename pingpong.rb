@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/home/pi/.rvm/rubies/ruby-1.9.3-p194/bin/ruby
 
 require 'rubygems'
 require 'wav-file'
@@ -18,28 +18,33 @@ def get_value(rawSound, index)
 end
 
 def record_audio
-  return system('arecord -d 3 -f S16_LE -D plug:default out.wav')
+  `arecord -d 3 -f S16_LE -D plug:default /rss/out.wav`
 end
 
 def load_audio
-  f =  open('out.wav')
-  format = WavFile::readFormat(f)
-  data = WavFile::readDataChunk(f).data
-  f.close
+  if File.exists?('/rss/out.wav')
+    f =  open('/rss/out.wav')
+    format = WavFile::readFormat(f)
+    data = WavFile::readDataChunk(f).data
+    f.close
 
-  return data
+    return data
+  end
 end
 
 def delete_old_file
-  return system('rm out.wav')
+  return system('rm /rss/out.wav') if File.exists?('/rss/out.wav')
 end
 
 def write_to_db
 
   db_name = "db/production.sqlite3"
+
+  #Record Ping
   begin
 
     db = SQLite3::Database.open db_name
+    db.execute "TRUNCATE TABLE pings"
     db.execute "INSERT INTO pings(time) VALUES (datetime('now'))"
 
   rescue SQLite3::Exception => e
@@ -52,6 +57,7 @@ def write_to_db
   end
 
 
+  #Record History
   begin
 
     rawTime = Time.now - Date.now.to_time
@@ -61,7 +67,12 @@ def write_to_db
 
     db = SQLite3::Database.open db_name
 
-    number_of_hits = db.execute "SELECT number_of_hits FROM histories WHERE id=#{}"
+    number_of_hits = db.execute "SELECT number_of_hits FROM histories WHERE time='#{index}'"
+    if number_of_hits.nil?
+      db.execute "INSERT INTO histories (number_of_hits, time) VALUES (1,#{index})"
+    else
+      db.execute "UPDATE histories SET number_of_hits='#{number_of_hits.to_i + 1}' WHERE time='#{index}'"
+    end
 
   rescue SQLite3::Exception => e
 
@@ -71,13 +82,37 @@ def write_to_db
   ensure
     db.close if db
   end
+
+  #Days
+  begin
+    db = SQLite3::Database.open db_name
+
+    if db.execute('SELECT count(*) from days').to_i == 0
+      db.execute "INSERT INTO days(date) VALUES (date('now'))"
+
+    else
+      unless db.execute('SELECT date FROM days WHERE id = (SELECT MAX(ID) FROM TABLE)').to_time == Date.today.to_time
+        db.execute "INSERT INTO days(date) VALUES (date('now'))"
+      end
+    end
+
+  rescue SQLite3::Exception => e
+
+    puts "Exception occured"
+    puts e
+
+  ensure
+    db.close if db
+  end
+
+
 end
 
 def detect_pings(rawSound)
   for index in 0..((rawSound.length - 1) / 2)
     if (get_value(rawSound, index * 2) > 4000)
         puts "#{Time.now} Ping Detected :: Amplitude: #{get_value(rawSound,index * 2)}"
-        system("echo #{Time.now} :: Amplitude: #{get_value(rawSound,index * 2)} >> ~/log/pings")
+        system("echo #{Time.now} :: Amplitude: #{get_value(rawSound,index * 2)} >> /rss/log")
         #Add DB call here
         write_to_db
         return
@@ -90,12 +125,11 @@ def main_loop
   record_audio
   rawSound = load_audio
   delete_old_file
-  detect_pings(rawSound)
+  detect_pings(rawSound) unless rawSound.nil?
 end
 
 #Create Log file if none
-system('mkdir ~/log')
-system('touch ~/log/pings')
+system('touch /rss/log')
 
 # RUN
 while true

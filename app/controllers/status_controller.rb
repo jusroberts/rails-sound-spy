@@ -20,7 +20,8 @@ class StatusController < ApplicationController
     @todayChartData = Array.new((9 * 60 / 5), 0)
     @averageChartData = Array.new((9 * 60 / 5), 0)
 
-    pings = Ping.all()
+    histories = History.all
+    days = Day.all
 
     #This is set to today and tomorrow until we get more data.
     yesterday = Date.yesterday.to_time
@@ -33,29 +34,11 @@ class StatusController < ApplicationController
     startTime = 9 * 60 * 60
     endTime = 18 * 60 * 60
 
-    pings.each do |p|
-      rawTime = p[:time] - p[:time].to_date.to_time
-      if p[:time] > (yesterday.to_time + startTime) and p[:time] < (yesterday.to_time + endTime)
-        #Do yesterday's buckets
-        @yesterdayChartData[(rawTime / (60 * 5)).to_int - (startTime / (60 * 5))] += 1
-      elsif p[:time] > (today.to_time + startTime) and p[:time] < (today.to_time + endTime)
-        #Do Today's buckets
-        @todayChartData[(rawTime / (60 * 5)).to_int - (startTime / (60 * 5))] += 1
-      end
-
-      if (p[:time] > p[:time].to_date.to_time + startTime) and (p[:time] < p[:time].to_date.to_time + endTime)
-        @averageChartData[(rawTime / (60 * 5)).to_int - (startTime / (60 * 5))] += 1
-      end
-
-
-      if @day.nil? or p[:time].to_date > @day
-        @day = p[:time].to_date
-        @numDays += 1
-        puts "Incrementing Days #{@numDays}"
-      end
-
-      @finalDay = p[:time].to_date
+    histories.each do |h|
+      @averageChartData[h.time] = h.number_of_hits
     end
+
+    @numDays = days.size
 
     unless @numDays == 0
       @averageChartData.map!{
@@ -78,9 +61,7 @@ class StatusController < ApplicationController
                })
       f.options[:yAxis][:title] = {:text=>"Detections"}
       f.options[:xAxis][:title] = {:text=>"Time"}
-      f.series(:type=> 'spline',:name=> 'Yesterday', :data=> @yesterdayChartData)
-      f.series(:type=> 'spline',:name=> 'Today', :data=> @todayChartData)
-      f.series(:type=> 'spline',:name=> 'Average', :data=> @averageChartData)
+      f.series(:type=> 'spline',:name=> 'Previous', :data=> @averageChartData)
 
     end
   end
