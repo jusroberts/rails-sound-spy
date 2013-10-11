@@ -49,6 +49,7 @@ def write_to_db
   rescue SQLite3::Exception => e
 
     system("echo Pings error >> /rss/log")
+    system("echo #{e}>> /rss/log")
     puts "Exception occured"
     puts e
 
@@ -77,6 +78,7 @@ def write_to_db
   rescue SQLite3::Exception => e
 
     system("echo History error >> /rss/log")
+    system("echo #{e}>> /rss/log")
     puts "Exception occured"
     puts e
 
@@ -100,6 +102,7 @@ def write_to_db
   rescue SQLite3::Exception => e
 
     system("echo Days error >> /rss/log")
+    system("echo #{e}>> /rss/log")
     puts "Exception occured"
     puts e
 

@@ -7,7 +7,7 @@
     <ignored path="rails-sound-spy.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381518316082" ignored="false" />
-    <file path="/pingpong.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381522033093" ignored="false" />
+    <file path="/pingpong.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381522237216" ignored="false" />
     <file path="$USER_HOME$/cbdr/miracle-workers/app/assets/stylesheets/cb_intl/global/nav_override.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1377143947380" ignored="false" />
     <file path="$USER_HOME$/cbdr/sologig/app/assets/stylesheets/cb_intl/global/nav_override.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1377144024355" ignored="false" />
     <file path="/20130924153818_create_pings.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380038141443" ignored="false" />
@@ -55,7 +55,7 @@
       <file leaf-file-name="pingpong.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pingpong.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="21" selection-start="2333" selection-end="2333" vertical-scroll-proportion="1.9214876">
+            <state line="104" column="34" selection-start="2458" selection-end="2458" vertical-scroll-proportion="0.7644628">
               <folding />
             </state>
           </provider>
@@ -821,7 +821,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pingpong.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="21" selection-start="2333" selection-end="2333" vertical-scroll-proportion="1.9214876">
+        <state line="104" column="34" selection-start="2458" selection-end="2458" vertical-scroll-proportion="0.7644628">
           <folding />
         </state>
       </provider>
