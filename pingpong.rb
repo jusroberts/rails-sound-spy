@@ -58,62 +58,62 @@ def write_to_db
   end
 
 
-  #Record History
-  begin
-
-    rawTime = Time.now - Date.now.to_time
-    startTime = startTime = 9 * 60 * 60
-
-    index = (rawTime / (60 * 5)).to_int - (startTime / (60 * 5))
-
-    db = SQLite3::Database.open db_name
-
-    system("echo #{index} >> /rss/log")
-
-    number_of_hits = db.execute "SELECT number_of_hits FROM histories WHERE time='#{index}'"
-
-    system("echo number of hits: #{number_of_hits} >> /rss/log")
-
-    if number_of_hits.nil?
-      db.execute "INSERT INTO histories (number_of_hits, time) VALUES (1,#{index})"
-    else
-      db.execute "UPDATE histories SET number_of_hits='#{number_of_hits.to_i + 1}' WHERE time='#{index}'"
-    end
-
-  rescue SQLite3::Exception => e
-
-    system("echo History error >> /rss/log")
-    system("echo #{e}>> /rss/log")
-    puts "Exception occured"
-    puts e
-
-  ensure
-    db.close if db
-  end
-
-  #Days
-  begin
-    db = SQLite3::Database.open db_name
-
-    if db.execute('SELECT count(*) from days').to_i == 0
-      db.execute "INSERT INTO days(date) VALUES (date('now'))"
-
-    else
-      unless db.execute('SELECT date FROM days WHERE id = (SELECT MAX(ID) FROM TABLE)').to_time == Date.today.to_time
-        db.execute "INSERT INTO days(date) VALUES (date('now'))"
-      end
-    end
-
-  rescue SQLite3::Exception => e
-
-    system("echo Days error >> /rss/log")
-    system("echo #{e}>> /rss/log")
-    puts "Exception occured"
-    puts e
-
-  ensure
-    db.close if db
-  end
+  ##Record History
+  #begin
+  #
+  #  rawTime = Time.now - Date.now.to_time
+  #  startTime = startTime = 9 * 60 * 60
+  #
+  #  index = (rawTime / (60 * 5)).to_int - (startTime / (60 * 5))
+  #
+  #  db = SQLite3::Database.open db_name
+  #
+  #  system("echo #{index} >> /rss/log")
+  #
+  #  number_of_hits = db.execute "SELECT number_of_hits FROM histories WHERE time='#{index}'"
+  #
+  #  system("echo number of hits: #{number_of_hits} >> /rss/log")
+  #
+  #  if number_of_hits.nil?
+  #    db.execute "INSERT INTO histories (number_of_hits, time) VALUES (1,#{index})"
+  #  else
+  #    db.execute "UPDATE histories SET number_of_hits='#{number_of_hits.to_i + 1}' WHERE time='#{index}'"
+  #  end
+  #
+  #rescue SQLite3::Exception => e
+  #
+  #  system("echo History error >> /rss/log")
+  #  system("echo #{e}>> /rss/log")
+  #  puts "Exception occured"
+  #  puts e
+  #
+  #ensure
+  #  db.close if db
+  #end
+  #
+  ##Days
+  #begin
+  #  db = SQLite3::Database.open db_name
+  #
+  #  if db.execute('SELECT count(*) from days').to_i == 0
+  #    db.execute "INSERT INTO days(date) VALUES (date('now'))"
+  #
+  #  else
+  #    unless db.execute('SELECT date FROM days WHERE id = (SELECT MAX(ID) FROM TABLE)').to_time == Date.today.to_time
+  #      db.execute "INSERT INTO days(date) VALUES (date('now'))"
+  #    end
+  #  end
+  #
+  #rescue SQLite3::Exception => e
+  #
+  #  system("echo Days error >> /rss/log")
+  #  system("echo #{e}>> /rss/log")
+  #  puts "Exception occured"
+  #  puts e
+  #
+  #ensure
+  #  db.close if db
+  #end
 
 
 end
