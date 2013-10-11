@@ -16,9 +16,9 @@ class StatusController < ApplicationController
 
   def chart
 
-    @yesterdayChartData = Array.new((10 * 60 / 5), 0)
-    @todayChartData = Array.new((10 * 60 / 5), 0)
-    @averageChartData = Array.new((10 * 60 / 5), 0)
+    @yesterdayChartData = Array.new((9 * 60 / 5), 0)
+    @todayChartData = Array.new((9 * 60 / 5), 0)
+    @averageChartData = Array.new((9 * 60 / 5), 0)
 
     pings = Ping.all()
 

@@ -35,10 +35,33 @@ def delete_old_file
 end
 
 def write_to_db
+
+  db_name = "db/production.sqlite3"
   begin
 
-    db = SQLite3::Database.open "db/production.sqlite3"
+    db = SQLite3::Database.open db_name
     db.execute "INSERT INTO pings(time) VALUES (datetime('now'))"
+
+  rescue SQLite3::Exception => e
+
+    puts "Exception occured"
+    puts e
+
+  ensure
+    db.close if db
+  end
+
+
+  begin
+
+    rawTime = Time.now - Date.now.to_time
+    startTime = startTime = 9 * 60 * 60
+
+    index = (rawTime / (60 * 5)).to_int - (startTime / (60 * 5))
+
+    db = SQLite3::Database.open db_name
+
+    number_of_hits = db.execute "SELECT number_of_hits FROM histories WHERE id=#{}"
 
   rescue SQLite3::Exception => e
 

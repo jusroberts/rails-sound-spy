@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130924153818) do
+ActiveRecord::Schema.define(version: 20130927192258) do
+
+  create_table "days", force: true do |t|
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "histories", force: true do |t|
+    t.integer  "number_of_hits"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pings", force: true do |t|
     t.datetime "time"
