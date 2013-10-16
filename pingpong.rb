@@ -144,7 +144,7 @@ def get_amplitude_threshold
   amplitude_threshold = 7000
 
   begin
-    file = File.new '/wwww/rails-sound-spy/sensitivity.var', 'r'
+    file = File.new '/www/rails-sound-spy/sensitivity.var', 'r'
   rescue
     #File doesn't exist.
   end
