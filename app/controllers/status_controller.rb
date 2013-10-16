@@ -8,7 +8,7 @@ class StatusController < ApplicationController
   	@ping = Ping.last()
 
    	unless @ping.nil?
-   		@available = (Time.now - @ping[:time] > 10 ? true : false)
+   		@available = (Time.now - @ping[:time] > 30 ? true : false)
    	else
    		@available = 'unknown'
    	end

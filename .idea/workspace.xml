@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5692c0ef-8b90-46bc-a5c2-17f7b6193592" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/status/index.html.erb" afterPath="$PROJECT_DIR$/app/views/status/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/status_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/status_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rails-sound-spy.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381944833309" ignored="false" />
+    <file path="/Dummy.txt" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381950246378" ignored="false" />
     <file path="/pingpong.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381522959826" ignored="false" />
     <file path="$USER_HOME$/cbdr/miracle-workers/app/assets/stylesheets/cb_intl/global/nav_override.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1377143947380" ignored="false" />
     <file path="$USER_HOME$/cbdr/sologig/app/assets/stylesheets/cb_intl/global/nav_override.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1377144024355" ignored="false" />
@@ -58,7 +55,7 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="286" selection-end="286" vertical-scroll-proportion="-6.875">
+            <state line="11" column="0" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -73,19 +70,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="status_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="status_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/status_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="5" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
+            <state line="10" column="47" selection-start="198" selection-end="198" vertical-scroll-proportion="0.20661157">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="status.css.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="status.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/status.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="11" selection-start="872" selection-end="872" vertical-scroll-proportion="0.73140496">
+            <state line="70" column="11" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -94,7 +91,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/status/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="6" selection-start="665" selection-end="665" vertical-scroll-proportion="-11.875">
+            <state line="19" column="6" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,11 +144,11 @@
         <option value="$PROJECT_DIR$/db/migrate/20130927191840_create_histories.rb" />
         <option value="$PROJECT_DIR$/app/models/history.rb" />
         <option value="$PROJECT_DIR$/pingpong.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/status_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/status/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" />
+        <option value="$PROJECT_DIR$/app/controllers/status_controller.rb" />
       </list>
     </option>
   </component>
@@ -186,7 +183,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -441,6 +437,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="RailsProjectView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -689,7 +686,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2682927" sideWeight="0.67039675" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27259684" sideWeight="0.67039675" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -828,13 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/status_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="5" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/data/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="40" selection-start="96" selection-end="96" vertical-scroll-proportion="0.042735044">
@@ -844,14 +834,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="286" selection-end="286" vertical-scroll-proportion="-6.875">
+        <state line="11" column="0" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/status/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="6" selection-start="665" selection-end="665" vertical-scroll-proportion="-11.875">
+        <state line="19" column="6" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -865,7 +855,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/status.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="11" selection-start="872" selection-end="872" vertical-scroll-proportion="0.73140496">
+        <state line="70" column="11" selection-start="872" selection-end="872" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/status_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="47" selection-start="198" selection-end="198" vertical-scroll-proportion="0.20661157">
           <folding />
         </state>
       </provider>
