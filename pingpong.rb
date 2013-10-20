@@ -55,8 +55,10 @@ def write_to_db
 end
 
 def detect_pings(rawSound)
+  amplitude_threshold = get_amplitude_threshold
+
   for index in 0..((rawSound.length - 1) / 2)
-    if (get_value(rawSound, index * 2) > 4000)
+    if (get_value(rawSound, index * 2) > amplitude_threshold)
         puts "#{Time.now} Ping Detected :: Amplitude: #{get_value(rawSound,index * 2)}"
         system("echo #{Time.now} :: Amplitude: #{get_value(rawSound,index * 2)} >> /rss/log")
         #Add DB call here
@@ -72,6 +74,30 @@ def main_loop
   rawSound = load_audio
   delete_old_file
   detect_pings(rawSound) unless rawSound.nil?
+end
+
+def get_amplitude_threshold
+  amplitude_threshold = 7000
+
+  begin
+    file = File.new '/www/rails-sound-spy/sensitivity.var', 'r'
+  rescue
+    #File doesn't exist.
+  end
+
+  unless file.nil?
+    while (line = file.gets)
+      begin
+        amplitude_threshold = line.to_i
+      rescue
+        #We don't have a number in here.
+      end
+    end
+
+    file.close
+  end
+
+  amplitude_threshold
 end
 
 #Create Log file if none
