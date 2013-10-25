@@ -3,7 +3,7 @@ body {
   margin: 0;
 }
 
-#container {
+.container {
   width: 50%;
   color: #193441;
   font-size: 0;
@@ -40,7 +40,6 @@ body {
 
 .section_title {
   padding-left: 65px;
-  width: 226px;
   margin: 0;
   padding-top: .5em;
 }
@@ -58,20 +57,36 @@ body {
   background-color: #fff;
 }
 
+.details{
+  width: 50%;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+  a {
+    color: red;
+  }
+}
 
 #footer {
   height: 300px;
 }
 #footer-title{
-  width: 100px;
-  margin: 50px auto 0;
+  width: 100%;
+  text-align: center;
+  margin: 25px auto 0;
+  font-weight: bold;
+  font-size: 17px;
 }
 #names {
-  width: 450px;
-  margin: 20px auto 0;
+  width: 600px;
+  margin: 10px auto 0;
+  font-size: 15px;
   span {
-    width: 100px;
-    margin: 10px 21px;
+    display: inline-block;
+    vertical-align: top;
+    width: 195px;
+    margin: 10px 0px;
+    text-align: center;
   }
 }
 
