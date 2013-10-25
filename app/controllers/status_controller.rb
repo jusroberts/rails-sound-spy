@@ -10,7 +10,7 @@ class StatusController < ApplicationController
    	unless @ping.nil?
    		@available = (Time.now - @ping[0][:time] > 60 ? true : false)
    	else
-   		@available = 'unknown'
+   		@available = true
    	end
   end
   #

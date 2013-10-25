@@ -4,6 +4,7 @@
     <list default="true" id="5692c0ef-8b90-46bc-a5c2-17f7b6193592" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/status/index.html.erb" afterPath="$PROJECT_DIR$/app/views/status/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/status_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/status_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rails-sound-spy.iws" />
@@ -19,8 +20,8 @@
     <file path="/data_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380310254972" ignored="false" />
     <file path="/routes.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380134412260" ignored="false" />
     <file path="/application.css" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381945158751" ignored="false" />
-    <file path="/status_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381521392615" ignored="false" />
-    <file path="/status.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1382665872522" ignored="false" />
+    <file path="/status_controller.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1382674107183" ignored="false" />
+    <file path="/status.css.scss" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1382674311935" ignored="false" />
     <file path="/application.html.erb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381945034537" ignored="false" />
     <file path="/history.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1381520502632" ignored="false" />
     <file path="/days.rb" changelist="5692c0ef-8b90-46bc-a5c2-17f7b6193592" time="1380309800263" ignored="false" />
@@ -120,25 +121,34 @@
       <file leaf-file-name="status_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/status_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="47" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
+            <state line="12" column="23" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="status.css.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="status.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/status.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="21" selection-start="816" selection-end="816" vertical-scroll-proportion="-9.705882">
+            <state line="24" column="17" selection-start="355" selection-end="355" vertical-scroll-proportion="0.53333336">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/status/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="29" selection-start="603" selection-end="603" vertical-scroll-proportion="0.32051283">
+            <state line="5" column="99" selection-start="337" selection-end="337" vertical-scroll-proportion="-3.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="available.json.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/status/available.json.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="37" selection-start="37" selection-end="37" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -192,10 +202,10 @@
         <option value="$PROJECT_DIR$/app/models/history.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/controllers/status_controller.rb" />
         <option value="$PROJECT_DIR$/pingpong.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" />
+        <option value="$PROJECT_DIR$/app/controllers/status_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/status/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/status.css.scss" />
       </list>
     </option>
   </component>
@@ -313,6 +323,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rails-sound-spy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rails-sound-spy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -684,11 +712,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/status/available.json.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="37" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/ping.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="31" selection-start="31" selection-end="53" vertical-scroll-proportion="0.0" />
@@ -733,27 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="286" selection-end="286" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/status_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="47" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -768,16 +770,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/status.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="21" selection-start="816" selection-end="816" vertical-scroll-proportion="-9.705882">
+        <state line="11" column="0" selection-start="286" selection-end="286" vertical-scroll-proportion="-6.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/status/available.json.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="37" selection-start="37" selection-end="37" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/status_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="23" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/status/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="29" selection-start="603" selection-end="603" vertical-scroll-proportion="0.32051283">
+        <state line="5" column="99" selection-start="337" selection-end="337" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/status.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="17" selection-start="355" selection-end="355" vertical-scroll-proportion="0.53333336">
           <folding />
         </state>
       </provider>
