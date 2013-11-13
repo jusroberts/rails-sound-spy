@@ -77,8 +77,8 @@ end
 def main_loop
   record_audio
   rawSound = load_audio
-  delete_old_file
   detect_pings(rawSound) unless rawSound.nil?
+  delete_old_file
 end
 
 def get_amplitude_threshold
