@@ -5,7 +5,7 @@ class StatusController < ApplicationController
   end
 
   def available
-  	@ping = Ping.limit(3).order('id desc').reverse
+  	@ping = Ping.limit(2).order('id desc').reverse
 
    	unless @ping.nil?
    		@available = (Time.now - @ping[0][:time] > 60 ? true : false)
