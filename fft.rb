@@ -9,7 +9,7 @@ class Rss
     spectrum = Array.new(window_size/2,0)
     hanning_window = hanning(window_size)
     iterations = 0
-    spectrum_array = Array.new(10, Array.new(window_size / 2, 0))
+    spectrum_array = Array.new()
     begin
       buf = RubyAudio::Buffer.float(window_size)
       RubyAudio::Sound.open(fname) do |snd|
@@ -26,6 +26,9 @@ class Rss
           i = 0
           spectrum_array[iterations].each { |x| spectrum_array[iterations][i] = x.magnitude; i+=1}
           iterations += 1
+
+          ping = analyze_for_hit(fft_slice, iterations - 1)
+          return ping if ping
         end
       end
 
@@ -35,7 +38,7 @@ class Rss
     end
 
 
-    return spectrum_array
+    return false
 
   end
 
@@ -54,6 +57,35 @@ class Rss
     (0..window_size).each { |x| hannified_array[i] = 0.5 - 0.5 * Math.cos(2 * Math::PI * i / window_size) ; i+=1}
 
     hannified_array
+  end
+
+  def self.analyze_for_hit(fft_array, index)
+    ranges = [{ :b_index => 27, :t_index => 47,   :min => 1,    :max => 2},     #Low area
+              { :b_index => 58, :t_index => 64,   :min => 2.5,  :max => 6.5},   #High peak
+              { :b_index => 70, :t_index => 74,   :min => 2.7,  :max => 4.2 },  #Mid peak
+              { :b_index => 82, :t_index => 109,  :min => 0.8,  :max => 2}      #Low area
+              ]
+
+    j=0
+    hit = Array.new()
+    #p "INDEX: #{index}"
+    ranges.each do |x|
+      sum_total = 0
+      for i in x[:b_index]..x[:t_index]
+        sum_total += fft_array[i] if !fft_array[i].nil?
+      end
+      average = sum_total / (x[:t_index] - x[:b_index])
+      hit[j] = average > x[:min] and average < x[:max]
+      #p x[:b_index]
+      #p average
+      #p hit[j]
+      j+=1
+    end
+    ping = !hit.include?(false)
+    #p "INDEX: #{index}" if ping
+    #p ping if ping
+    #p ping
+    return ping
   end
 
 end

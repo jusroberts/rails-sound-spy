@@ -1,5 +1,7 @@
 #!/home/pi/.rvm/rubies/ruby-1.9.3-p194/bin/ruby
 
+load 'fft.rb'
+
 require 'rubygems'
 require 'wav-file'
 require 'sqlite3'
@@ -59,10 +61,13 @@ def detect_pings(rawSound)
 
   for index in 0..((rawSound.length - 1) / 2)
     if (get_value(rawSound, index * 2) > amplitude_threshold)
+      if (Rss.gen_fft('/rss/out.wav'))
         puts "#{Time.now} Ping Detected :: Amplitude: #{get_value(rawSound,index * 2)}"
         system("echo #{Time.now} :: Amplitude: #{get_value(rawSound,index * 2)} >> /rss/log")
-        #Add DB call here
+        #Write it to the DB!
         write_to_db
+      end
+
         return
     end
   end
