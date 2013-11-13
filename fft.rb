@@ -10,6 +10,7 @@ class Rss
     hanning_window = hanning(window_size)
     iterations = 0
     spectrum_array = Array.new()
+    hits = 0
     begin
       buf = RubyAudio::Buffer.float(window_size)
       RubyAudio::Sound.open(fname) do |snd|
@@ -29,6 +30,7 @@ class Rss
 
           ping = analyze_for_hit(fft_slice, iterations - 1)
           return ping if ping
+          #hits += 1 if ping
         end
       end
 
@@ -37,7 +39,7 @@ class Rss
       exit
     end
 
-
+    #p hits
     return false
 
   end
@@ -62,7 +64,7 @@ class Rss
   def self.analyze_for_hit(fft_array, index)
     ranges = [{ :b_index => 27, :t_index => 47,   :min => 1,    :max => 2},     #Low area
               { :b_index => 58, :t_index => 64,   :min => 2.5,  :max => 6.5},   #High peak
-              { :b_index => 70, :t_index => 74,   :min => 2.7,  :max => 4.2 },  #Mid peak
+              { :b_index => 70, :t_index => 74,   :min => 2.0,  :max => 4.2 },  #Mid peak
               { :b_index => 82, :t_index => 109,  :min => 0.8,  :max => 2}      #Low area
               ]
 
