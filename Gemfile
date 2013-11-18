@@ -30,6 +30,11 @@ gem 'jbuilder', '~> 1.2'
 # Dem charts
 gem 'lazy_high_charts'
 
+# Required for pingpong.rb, fft.rb
+gem 'wav-file'
+gem 'fftw3'
+gem 'ruby-audio'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

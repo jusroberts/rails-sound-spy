@@ -1,5 +1,5 @@
-require "ruby-audio"
-require "fftw3"
+require 'ruby-audio'
+require 'fftw3'
 
 class Rss
   def self.gen_fft (name)
