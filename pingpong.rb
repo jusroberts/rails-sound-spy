@@ -1,10 +1,10 @@
 #!/home/pi/.rvm/rubies/ruby-1.9.3-p194/bin/ruby
 
-load 'fft.rb'
 
 require 'rubygems'
 require 'wav-file'
 require 'sqlite3'
+require 'spectrum-analyzer'
 
 
 def get_value(rawSound, index)
@@ -61,7 +61,7 @@ def detect_pings(rawSound)
 
   for index in 0..((rawSound.length - 1) / 2)
     if (get_value(rawSound, index * 2) > amplitude_threshold)
-      if (Rss.gen_fft('/rss/out.wav'))
+      if (SpectrumAnalyzer.quick_analyze)
         puts "#{Time.now} Ping Detected :: Amplitude: #{get_value(rawSound,index * 2)}"
         system("echo #{Time.now} :: Amplitude: #{get_value(rawSound,index * 2)} >> /rss/log")
         #Write it to the DB!
@@ -83,7 +83,7 @@ end
 
 def get_amplitude_threshold
   amplitude_threshold = 7000
-
+  set_configuration
   begin
     file = File.new '/www/rails-sound-spy/sensitivity.var', 'r'
   rescue
@@ -105,8 +105,28 @@ def get_amplitude_threshold
   amplitude_threshold
 end
 
+def set_configuration
+  conf = load_configuration
+  unless conf == {}
+    SpectrumAnalyzer.configuration.window_size     = conf[:window_size]     unless conf[:window_size].blank?
+    SpectrumAnalyzer.configuration.window_function = conf[:window_function] unless conf[:window_function].blank?
+    SpectrumAnalyzer.configuration.analysis_range  = conf[:analysis_range]  unless conf[:analysis_range].blank?
+    SpectrumAnalyzer.configuration.file_name       = conf[:file_name]       unless conf[:file_name].blank?
+  end
+end
+
+def load_configuration
+  begin
+    return YAML.load_file('/rss/ping.yml')
+  rescue
+    return {}
+  end
+end
+
 #Create Log file if none
 system('touch /rss/log')
+
+SpectrumAnalyzer.configuration(load_configuration)
 
 # RUN
 while true
