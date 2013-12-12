@@ -34,6 +34,8 @@ gem 'lazy_high_charts'
 gem 'wav-file'
 gem 'fftw3'
 gem 'ruby-audio'
+gem 'spectrum-analyzer'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
